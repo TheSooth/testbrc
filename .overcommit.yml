@@ -16,10 +16,9 @@
 # Uncomment the following lines to make the configuration take effect.
 
 PrePush:
- ProtectedBranches:
-  enabled: true
-  description: 'Check for force push to protected branch'
-  branches: ['master', 'release', 'integration']
+ CustomScript:
+    enabled: true
+    required_executable: '/bin/bash'
 
  IndexTags:
    enabled: true # Generate a tags file with `ctags` each time HEAD changes
